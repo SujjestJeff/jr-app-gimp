@@ -1,0 +1,14 @@
+version: '3'
+services:
+  gimpui:
+    image: jr-app-gimp
+    environment:
+     - VNC_PASSWORD=jr
+     - DISPLAY_WIDTH=1462
+     - DISPLAY_HEIGHT=820
+     - USER_ID=501
+     - GROUP_ID=20
+    volumes:
+      - ~/gimp:/app/:rw
+    ports:
+     - 5801:5800
